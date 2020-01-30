@@ -5,7 +5,7 @@ This exercise is the same as the previous one with the only difference that a le
 ## Schematic
 
 <p align="center">
-    <img src="./ex1_schem.png" height="450" alt="Schematic"></img>
+    <img src="./ex1_schem.png" alt="Schematic"></img>
 </p>
 
 ## Code
