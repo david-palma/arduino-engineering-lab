@@ -1,4 +1,4 @@
-# Exercise 1
+# Exercise 2
 
 This exercise makes use of array to turn ON and OFF multiple LEDs in sequence.
 
