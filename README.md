@@ -11,5 +11,5 @@ The source code is well commented and easy to follow, though a minimum knowledge
 
 * [exercise 00](https://github.com/david-palma/Arduino/tree/master/ex0): turn the built-in led on and off
 * [exercise 01](https://github.com/david-palma/Arduino/tree/master/ex1): turn an external LED on and off
-* [exercise 02](https://github.com/david-palma/Arduino/tree/master/ex2):
+* [exercise 02](https://github.com/david-palma/Arduino/tree/master/ex2): making use of array to turn a series of LEDs on and off
 * [exercise 03](https://github.com/david-palma/Arduino/tree/master/ex3): measure the temperature using a TMP36 sensor
