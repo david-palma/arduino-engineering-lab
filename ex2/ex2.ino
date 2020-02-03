@@ -14,6 +14,7 @@ void setup()
     for(int cnt = 0; cnt < no_pins - 1; cnt++)
     {
         pinMode(led_pins[cnt], OUTPUT);
+        digitalWrite(led_pins[cnt], LOW);
     }
 }
 
