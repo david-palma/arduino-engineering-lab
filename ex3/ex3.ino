@@ -1,6 +1,6 @@
 /**
  * Exercise no. 3
- */
+ **/
 
 // define constants
 const int sensor_pin = A0;
