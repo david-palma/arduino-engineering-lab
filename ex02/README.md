@@ -5,7 +5,7 @@ This exercise makes use of array to turn ON and OFF multiple LEDs in sequence.
 ## Schematic
 
 <p align="center">
-    <img src="./ex2_schem.png" height="600px" alt="Schematic"></img>
+    <img src="./ex02_schem.png" height="600px" alt="Schematic"></img>
 </p>
 
 ## Code

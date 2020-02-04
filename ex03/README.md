@@ -5,7 +5,7 @@ This exercise consists in measuring the environmental temperature using a TMP36 
 ## Schematic
 
 <p align="center">
-    <img src="./ex3_schem.png" height="525px" alt="Schematic"></img>
+    <img src="./ex03_schem.png" height="525px" alt="Schematic"></img>
 </p>
 
 ## Code
