@@ -6,7 +6,7 @@
 const int sensor_pin = A0;
 const float baseline = 20.0;
 const int led_pins[] = { 2, 3, 4 };                  // array of LED pins
-const int no_pins    = sizeof(no_pins)/sizeof(int);  // number of pins
+const int no_pins    = sizeof(led_pins)/sizeof(int);  // number of pins
 const int wait_next  = 2000;                         // milliseconds between two acquisitions
 
 // initialisation
