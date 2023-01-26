@@ -40,7 +40,7 @@ void loop()
     }
 
     // turn the leds ON and OFF from last to first
-    for(int cnt = no_pins - 2; cnt >= 0; cnt--)
+    for(int cnt = no_pins - 2; cnt >= 1; cnt--)
     {
         digitalWrite(led_pins[cnt], HIGH);  // turn the LED on
         delay(between_HL);                  // wait for a second
