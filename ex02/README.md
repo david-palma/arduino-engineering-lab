@@ -12,15 +12,15 @@ This exercise makes use of array to turn ON and OFF multiple LEDs in sequence.
 
 ```c
 // define constants
-const int led_pins[] = { 9, 10, 11, 12, 13 };        // array of LED pins
+const int led_pins[] = { 9, 10, 11, 12, 13 };         // array of LED pins
 const int no_pins    = sizeof(led_pins)/sizeof(int);  // number of pins
-const int between_HL = 500;                          // milliseconds between ON and OFF
+const int between_HL = 200;                           // milliseconds between ON and OFF
 
 // initialisation
 void setup()
 {
     // set the digital pins as outputs using a for loop
-    for(int cnt = 0; cnt < no_pins - 1; cnt++)
+    for(int cnt = 0; cnt < no_pins; cnt++)
     {
         pinMode(led_pins[cnt], OUTPUT);
         digitalWrite(led_pins[cnt], LOW);
