@@ -5,7 +5,7 @@
 // define constants
 const int led_pins[] = { 9, 10, 11, 12, 13 };         // array of LED pins
 const int no_pins    = sizeof(led_pins)/sizeof(int);  // number of pins
-const int between_HL = 200;                           // milliseconds between ON and OFF
+const int between_HL = 250;                           // milliseconds between ON and OFF
 
 // initialisation
 void setup()
