@@ -1,4 +1,4 @@
-# Arduino programming
+# Arduino Engineering Lab
 # Exercise n. 06 - data visualisation
 
 import time

@@ -1,4 +1,4 @@
-// Arduino programming
+// Arduino Engineering Lab
 // Exercise n. 01
 
 // define constants

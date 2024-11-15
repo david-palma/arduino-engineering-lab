@@ -1,4 +1,4 @@
-// Arduino programming
+// Arduino Engineering Lab
 // Exercise n. 05
 
 #include <SoftwareSerial.h>

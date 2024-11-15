@@ -1,13 +1,17 @@
-# Arduino Practical Lab Exercises
+# Arduino Engineering Lab
 
-This repository is meant to provide open source resources for educational purposes about practical lab exercises for embedded controllers using C/C++ and Arduino.
+This repository contains a collection of practical Arduino engineering projects and exercises designed to explore various aspects of embedded systems. The projects cover a wide range of topics, including sensors, wireless communication, actuators, and data visualisation.
 
-**NOTE**: it is assumed that you have access to a computer with a Arduino software installed.
+The exercises are structured to provide hands-on experience with key embedded systems concepts, such as reading data from sensors (e.g., temperature, light, air quality), controlling actuators like servo motors, and transmitting data wirelessly using modules like Bluetooth (HC-05) and NRF24L01.
 
-## List of the exercises
+Additionally, the data collected from these exercises is visualised in real-time using Python, making it easier to analyse and monitor the system's behaviour.
 
-Here you can find the solutions to different simple practical lab exercises using Arduino and programming in C/C++.
-The source code is well commented and easy to follow, though a minimum knowledge of C/C++ language is recommended.
+**NOTE**: it is assumed that you have access to a computer with all the required software installed.
+
+## List of Exercises
+
+This repository contains solutions to various practical lab exercises using **Arduino**. Each exercise is designed to introduce different concepts and components, allowing you to build and experiment with embedded systems.
+The source code is well-commented and easy to follow. A basic understanding of **C/C++** for Arduino programming and **Python** (where applicable) is recommended for a better learning experience.
 
 - [exercise 00](./ex00): turn the built-in led on and off
 - [exercise 01](./ex01): turn an external LED on and off
