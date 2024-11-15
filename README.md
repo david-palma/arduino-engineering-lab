@@ -15,6 +15,7 @@ The source code is well commented and easy to follow, though a minimum knowledge
 - [exercise 03](./ex03): measure the temperature using a TMP36 sensor
 - [exercise 04](./ex04): send and receive data wirelessly using a Bluetooth module (HC-05)
 - [exercise 05](./ex05): control a servo motor's position wirelessly using a Bluetooth module (HC-05)
+- [exercise 06](./ex06): Wireless Sensor Network (WSN) for comprehensive environmental monitoring
 
 ## License
 

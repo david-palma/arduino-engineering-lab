@@ -1,5 +1,6 @@
 // Arduino programming
 // Exercise n. 04
+
 #include <SoftwareSerial.h>
 
 // Define RX and TX pins for the Software Serial port

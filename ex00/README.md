@@ -5,19 +5,19 @@ This exercise consists in the simplest thing to do with an Arduino to see the ph
 ## Code
 
 ```c
-// the setup function runs once when you press reset or power the board
+// initialisation
 void setup()
 {
-    // initialise digital pin LED_BUILTIN as an output.
+    // LED_BUILTIN pin initialisation as an output
     pinMode(LED_BUILTIN, OUTPUT);
 }
 
-// the loop function runs over and over again forever
+// main loop function
 void loop()
 {
-    digitalWrite(LED_BUILTIN, HIGH);   // turn the LED on
-    delay(1000);                       // wait for a second
-    digitalWrite(LED_BUILTIN, LOW);    // turn the LED off
-    delay(1000);                       // wait for a second
+    digitalWrite(LED_BUILTIN, HIGH); // turn the LED on
+    delay(1000);                     // wait for a second
+    digitalWrite(LED_BUILTIN, LOW);  // turn the LED off
+    delay(1000);                     // wait for a second
 }
 ```

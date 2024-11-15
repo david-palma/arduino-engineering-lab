@@ -11,19 +11,22 @@ This exercise is the same as the previous one with the only difference that a le
 ## Code
 
 ```c
-// the setup function runs once when you press reset or power the board
+// define constants
+const int led_pin = 13;
+
+// initialisation
 void setup()
 {
-    // initialise digital pin LED_BUILTIN as an output.
-    pinMode(LED_BUILTIN, OUTPUT);
+    // set the digital pin as output
+    pinMode(led_pin, OUTPUT);
 }
 
-// the loop function runs over and over again forever
+// main loop function
 void loop()
 {
-    digitalWrite(LED_BUILTIN, HIGH);   // turn the LED on
-    delay(1000);                       // wait for a second
-    digitalWrite(LED_BUILTIN, LOW);    // turn the LED off
-    delay(1000);                       // wait for a second
+    digitalWrite(led_pin, HIGH); // turn the LED on
+    delay(1000);                 // wait for a second
+    digitalWrite(led_pin, LOW);  // turn the LED off
+    delay(1000);                 // wait for a second
 }
 ```
