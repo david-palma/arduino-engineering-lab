@@ -1,13 +1,12 @@
-/**
- * Exercise no. 3
- **/
+// Arduino programming
+// Exercise n. 03
 
 // define constants
 const int sensor_pin = A0;
 const float baseline = 20.0;
-const int led_pins[] = { 2, 3, 4 };                  // array of LED pins
-const int no_pins    = sizeof(led_pins)/sizeof(int);  // number of pins
-const int wait_next  = 2000;                         // milliseconds between two acquisitions
+const int led_pins[] = {2, 3, 4};                   // array of LED pins
+const int no_pins = sizeof(led_pins) / sizeof(int); // number of pins
+const int wait_next = 2000;                         // milliseconds between two acquisitions
 
 // initialisation
 void setup()
@@ -16,7 +15,7 @@ void setup()
     Serial.begin(9600);
 
     // set the digital pins as outputs using a for loop
-    for(int cnt = 0; cnt < no_pins - 1; cnt++)
+    for (int cnt = 0; cnt < no_pins - 1; cnt++)
     {
         pinMode(led_pins[cnt], OUTPUT);
         digitalWrite(led_pins[cnt], LOW);
@@ -34,7 +33,7 @@ void loop()
     Serial.print(sensor_value);
 
     // convert the ADC reading to voltage
-    float voltage = (sensor_value/1024.0) * 5;
+    float voltage = (sensor_value / 1024.0) * 5;
 
     // send the voltage level out the serial port
     Serial.print(", Voltage: ");
@@ -47,35 +46,35 @@ void loop()
     Serial.print(", Degrees in Celsius: ");
     Serial.println(temperature);
 
-    if(temperature < baseline)
+    if (temperature < baseline)
     {
         // temperature less than 20°C
-        digitalWrite(led_pins[0], LOW);   // OFF
-        digitalWrite(led_pins[1], LOW);   // OFF
-        digitalWrite(led_pins[2], LOW);   // OFF
+        digitalWrite(led_pins[0], LOW); // OFF
+        digitalWrite(led_pins[1], LOW); // OFF
+        digitalWrite(led_pins[2], LOW); // OFF
     }
-    else if(temperature > baseline + 2 &&
-            temperature < baseline + 8)
+    else if (temperature > baseline + 2 &&
+             temperature < baseline + 8)
     {
         // temperature between 22°C and 28°C
-        digitalWrite(led_pins[0], HIGH);  // ON
-        digitalWrite(led_pins[1], LOW);   // OFF
-        digitalWrite(led_pins[2], LOW);   // OFF
+        digitalWrite(led_pins[0], HIGH); // ON
+        digitalWrite(led_pins[1], LOW);  // OFF
+        digitalWrite(led_pins[2], LOW);  // OFF
     }
-    else if(temperature > baseline + 8 &&
-            temperature < baseline + 12)
+    else if (temperature > baseline + 8 &&
+             temperature < baseline + 12)
     {
         // temperature between 28°C and 32°C
-        digitalWrite(led_pins[0], HIGH);  // ON
-        digitalWrite(led_pins[1], HIGH);  // ON
-        digitalWrite(led_pins[2], LOW);   // OFF
+        digitalWrite(led_pins[0], HIGH); // ON
+        digitalWrite(led_pins[1], HIGH); // ON
+        digitalWrite(led_pins[2], LOW);  // OFF
     }
-    else if(temperature > baseline + 12)
+    else if (temperature > baseline + 12)
     {
         // temperature greater than 32°C
-        digitalWrite(led_pins[0], HIGH);  // ON
-        digitalWrite(led_pins[1], HIGH);  // ON
-        digitalWrite(led_pins[2], HIGH);  // ON
+        digitalWrite(led_pins[0], HIGH); // ON
+        digitalWrite(led_pins[1], HIGH); // ON
+        digitalWrite(led_pins[2], HIGH); // ON
     }
 
     // wait 2s

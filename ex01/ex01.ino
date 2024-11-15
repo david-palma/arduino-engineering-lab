@@ -1,6 +1,5 @@
-/**
- * Exercise no. 1
- **/
+// Arduino programming
+// Exercise n. 01
 
 // define constants
 const int led_pin = 13;
@@ -15,8 +14,8 @@ void setup()
 // main loop function
 void loop()
 {
-    digitalWrite(led_pin, HIGH);   // turn the LED on
-    delay(1000);                   // wait for a second
-    digitalWrite(led_pin, LOW);    // turn the LED off
-    delay(1000);                   // wait for a second
+    digitalWrite(led_pin, HIGH); // turn the LED on
+    delay(1000);                 // wait for a second
+    digitalWrite(led_pin, LOW);  // turn the LED off
+    delay(1000);                 // wait for a second
 }

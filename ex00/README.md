@@ -8,7 +8,7 @@ This exercise consists in the simplest thing to do with an Arduino to see the ph
 // the setup function runs once when you press reset or power the board
 void setup()
 {
-    // initialize digital pin LED_BUILTIN as an output.
+    // initialise digital pin LED_BUILTIN as an output.
     pinMode(LED_BUILTIN, OUTPUT);
 }
 
