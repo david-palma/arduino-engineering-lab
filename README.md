@@ -1,4 +1,4 @@
-# Arduino
+# Arduino Practical Lab Exercises
 
 This repository is meant to provide open source resources for educational purposes about practical lab exercises for embedded controllers using C/C++ and Arduino.
 
