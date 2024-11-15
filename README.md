@@ -14,6 +14,7 @@ The source code is well commented and easy to follow, though a minimum knowledge
 - [exercise 02](./ex02): making use of array to turn a series of LEDs on and off
 - [exercise 03](./ex03): measure the temperature using a TMP36 sensor
 - [exercise 04](./ex04): send and receive data wirelessly using a Bluetooth module (HC-05)
+- [exercise 05](./ex05): control a servo motor's position wirelessly using a Bluetooth module (HC-05)
 
 ## License
 
