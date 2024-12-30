@@ -20,6 +20,7 @@ The source code is well-commented and easy to follow. A basic understanding of *
 - [exercise 04](./ex04): send and receive data wirelessly using a Bluetooth module (HC-05)
 - [exercise 05](./ex05): control a servo motor's position wirelessly using a Bluetooth module (HC-05)
 - [exercise 06](./ex06): Wireless Sensor Network (WSN) for comprehensive environmental monitoring
+- [exercise 07](./ex07): generate a Christmas melody with a buzzer and perform frequency analysis using Python
 
 ## License
 
