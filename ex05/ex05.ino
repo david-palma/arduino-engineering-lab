@@ -12,7 +12,7 @@ Servo myServo;
 
 void setup()
 {
-    // Initialize serial communication
+    // Initialise serial communication
     Serial.begin(9600);
     BTSerial.begin(9600);
 
