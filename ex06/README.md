@@ -10,19 +10,19 @@ The main objectives of the exercise are as follows:
 
 ## Explanation of the Process
 
-### Sensor Node:
+### Sensor Node
 
 - The **DHT22** measures temperature and humidity.
 - The **LDR** measures light intensity.
 - The **MQ-135** measures air quality.
 - The data is sent wirelessly to the central system using the **Xbee/NRF24L01** module.
 
-### Central System:
+### Central System
 
 - The central **Arduino** receives the data from the sensor node via the **Xbee/NRF24L01** module.
 - This data can be viewed in the **Serial Monitor** or sent to a **PC** for storage and visualisation.
 
-### PC Data Visualisation:
+### PC Data Visualisation
 
 - A **Python script** is used to receive data from the Arduino and visualise it in real-time using **Matplotlib**, allowing you to monitor the environmental parameters continuously.
 - The script also stores the data for further analysis or logging.
@@ -246,3 +246,24 @@ if __name__ == "__main__":
     plt.ion()  # Turn on interactive mode for real-time plotting
     read_data()
 ```
+
+## Exercise Steps
+
+1. **Set up the Sensor Node:**
+   - Assemble the sensors (DHT22, LDR, and MQ-135) and connect them to the Arduino as per the schematic.
+   - Connect the wireless communication module (Xbee/NRF24L01) to the Arduino.
+   - Upload the provided Sensor Node code to the Arduino.
+
+2. **Set up the Central System:**
+   - Connect the wireless communication module to the central Arduino.
+   - Upload the provided Central System code to the Arduino.
+
+3. **Connect the Central Arduino to PC:**
+   - Use a USB cable to connect the central Arduino to your PC for data transfer.
+
+4. **Test Communication:**
+   - Open the Serial Monitor in the Arduino IDE on the central system to check for incoming data.
+
+5. **Visualise Data on PC:**
+   - Install the required Python libraries (`matplotlib` and `pyserial`) on your PC.
+   - Run the provided Python script to visualise the data in real-time.
