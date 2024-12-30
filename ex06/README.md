@@ -152,7 +152,7 @@ void setup()
     // Start serial communication for debugging
     Serial.begin(9600);
     xbee.begin(9600);
-    Serial.println("Central system initialized. Waiting for data...");
+    Serial.println("Central system initialised. Waiting for data...");
 }
 
 void loop()
