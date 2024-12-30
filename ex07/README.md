@@ -11,24 +11,24 @@ The main objectives of the exercise are as follows:
 
 ## Explanation of the Process
 
-### Melody Generation:
+### Melody Generation
 
 - The **Arduino** generates the "Jingle Bells" melody using predefined frequencies for each note.
 - A **piezo buzzer** connected to **Pin 8** and **GND** plays the melody.
 - The melody is created by looping through an array of notes and using the `tone()` function to generate the appropriate frequencies.
 
-### Recording the Melody:
+### Recording the Melody
 
 - A microphone is used to record the sound produced by the piezo buzzer during playback.
 - The recording is stored as a **WAV file** using Python for subsequent analysis.
 
-### Signal Analysis:
+### Signal Analysis
 
 - A **Python script** is used to process the recorded melody and extract insights:
-  - **Time-domain visualisation**: Displays the waveform of the melody to understand how the signal varies over time.
-  - **Frequency-domain analysis**: Calculates the Fast Fourier Transform (FFT) to examine the frequency components of the melody.
-  - **Spectrogram visualisation**: Shows how the frequency content of the melody evolves over time.
-  - **Chromatic spectrum analysis**: Identifies the intensities of musical notes in the melody and displays them graphically.
+    - **Time-domain visualisation**: Displays the waveform of the melody to understand how the signal varies over time.
+    - **Frequency-domain analysis**: Calculates the Fast Fourier Transform (FFT) to examine the frequency components of the melody.
+    - **Spectrogram visualisation**: Shows how the frequency content of the melody evolves over time.
+    - **Chromatic spectrum analysis**: Identifies the intensities of musical notes in the melody and displays them graphically.
 
 ## Tools Required
 
@@ -37,11 +37,11 @@ The main objectives of the exercise are as follows:
 - Breadboard
 - Jumper wires
 - A computer with Python and the following libraries installed:
-  - `numpy`
-  - `matplotlib`
-  - `sounddevice`
-  - `librosa`
-  - `scipy`
+    - `numpy`
+    - `matplotlib`
+    - `sounddevice`
+    - `librosa`
+    - `scipy`
 
 ## Schematic Description
 
@@ -61,69 +61,67 @@ This Arduino code generates a simple "Jingle Bells" melody using a piezo buzzer.
 const int buzzerPin = 8;
 
 // Define notes for the melody (frequency in Hz)
-#define NOTE_C4  262
-#define NOTE_D4  294
-#define NOTE_E4  330
-#define NOTE_F4  349
-#define NOTE_G4  392
-#define NOTE_A4  440
-#define NOTE_B4  494
-#define NOTE_C5  523
+#define NOTE_C4 262
+#define NOTE_D4 294
+#define NOTE_E4 330
+#define NOTE_F4 349
+#define NOTE_G4 392
+#define NOTE_A4 440
+#define NOTE_B4 494
+#define NOTE_C5 523
 
 // Define the melody: "Jingle Bells"
 int melody[] =
-{
-  NOTE_E4, NOTE_E4, NOTE_E4, NOTE_E4, NOTE_E4, NOTE_E4, NOTE_E4,
-  NOTE_G4, NOTE_C4, NOTE_D4, NOTE_E4, NOTE_F4, NOTE_F4, NOTE_F4,
-  NOTE_F4, NOTE_F4, NOTE_E4, NOTE_E4, NOTE_E4, NOTE_E4, NOTE_E4,
-  NOTE_D4, NOTE_D4, NOTE_E4, NOTE_D4, NOTE_G4
-};
+    {
+        NOTE_E4, NOTE_E4, NOTE_E4, NOTE_E4, NOTE_E4, NOTE_E4, NOTE_E4,
+        NOTE_G4, NOTE_C4, NOTE_D4, NOTE_E4, NOTE_F4, NOTE_F4, NOTE_F4,
+        NOTE_F4, NOTE_F4, NOTE_E4, NOTE_E4, NOTE_E4, NOTE_E4, NOTE_E4,
+        NOTE_D4, NOTE_D4, NOTE_E4, NOTE_D4, NOTE_G4};
 
 // Define note durations (4 = quarter note, 8 = eighth note, etc.)
 int noteDurations[] =
-{
-  8, 8, 4, 8, 8, 4, 8, 8, 8, 8, 4, 8, 8, 8,
-  8, 8, 8, 8, 8, 4, 8, 8, 8, 8, 8, 4
-};
+    {
+        8, 8, 4, 8, 8, 4, 8, 8, 8, 8, 4, 8, 8, 8,
+        8, 8, 8, 8, 8, 4, 8, 8, 8, 8, 8, 4};
 
 // Number of notes
 int numberOfNotes = sizeof(melody) / sizeof(melody[0]);
 
 void setup()
 {
-  // Set the buzzer pin as an output
-  pinMode(buzzerPin, OUTPUT);
+    // Set the buzzer pin as an output
+    pinMode(buzzerPin, OUTPUT);
 }
 
 void loop()
 {
-  for (int i = 0; i < numberOfNotes; i++)
-  {
-    int note = melody[i];           // Get the note (frequency in Hz)
-    int duration = noteDuration[i]; // Get the note duration
+    for (int i = 0; i < numberOfNotes; i++)
+    {
+        int note = melody[i];            // Get the note (frequency in Hz)
+        int duration = noteDurations[i]; // Get the note duration
 
-    // Play the note
-    tone(buzzerPin, note, duration);
-    delay(duration * 1.30); // Pause between notes (slightly longer than note duration)
-  }
+        // Play the note
+        tone(buzzerPin, note, duration);
+        delay(duration * 1.30); // Pause between notes (slightly longer than note duration)
+    }
 
-  // Add a delay before repeating the melody
-  delay(1000);
+    // Add a delay before repeating the melody
+    delay(1000);
 }
 
 // Function to play the tone on the buzzer
 void tone(int pin, int frequency, int duration)
 {
-  long delayValue = 1000000 / frequency / 2;     // Calculate delay for the high and low part of the wave
-  long  numCycles = frequency * duration / 1000; // Calculate number of cycles for the given duration
+    long delayValue = 1000000 / frequency / 2;    // Calculate delay for the high and low part of the wave
+    long numCycles = frequency * duration / 1000; // Calculate number of cycles for the given duration
 
-  for (long i = 0; i < numCycles; i++)
-  {
-    digitalWrite(pin, HIGH); // Turn the buzzer on
-    delayMicroseconds(delayValue);
-    digitalWrite(pin, LOW);  // Turn the buzzer off
-    delayMicroseconds(delayValue);
-  }
+    for (long i = 0; i < numCycles; i++)
+    {
+        digitalWrite(pin, HIGH); // Turn the buzzer on
+        delayMicroseconds(delayValue);
+        digitalWrite(pin, LOW); // Turn the buzzer off
+        delayMicroseconds(delayValue);
+    }
 }
 ```
 
@@ -205,35 +203,35 @@ plt.show()
 
 1. **Assemble the Circuit:**
 
-   - Connect the piezo buzzer to **Pin 8** and **GND** on the Arduino board.
-   - Ensure all connections are secure on the breadboard.
+    - Connect the piezo buzzer to **Pin 8** and **GND** on the Arduino board.
+    - Ensure all connections are secure on the breadboard.
 
 2. **Upload the Arduino Code:**
 
-   - Open the Arduino IDE on your PC.
-   - Copy the provided Arduino code into the IDE and verify it to ensure there are no errors.
-   - Connect your Arduino to the PC via USB and upload the code.
+    - Open the Arduino IDE on your PC.
+    - Copy the provided Arduino code into the IDE and verify it to ensure there are no errors.
+    - Connect your Arduino to the PC via USB and upload the code.
 
 3. **Prepare for Recording:**
 
-   - Set up a microphone connected to your PC.
-   - Ensure the microphone is configured as the default recording device in your system's audio settings.
+    - Set up a microphone connected to your PC.
+    - Ensure the microphone is configured as the default recording device in your system's audio settings.
 
 4. **Play and Record the Melody:**
 
-   - Once the Arduino code is uploaded, the buzzer will start playing "Jingle Bells."
-   - Simultaneously, run the Python script to record the sound. The script will save the recording as a WAV file.
+    - Once the Arduino code is uploaded, the buzzer will start playing "Jingle Bells."
+    - Simultaneously, run the Python script to record the sound. The script will save the recording as a WAV file.
 
 5. **Analyse the Recorded Melody:**
 
-   - Run the Python script to process and analyse the recorded audio.
-   - Observe the visualisations, including:
-     - Waveform of the melody in the time domain.
-     - Frequency spectrum (FFT) showing the dominant frequencies.
-     - Spectrogram showing frequency variation over time.
-     - Chromatic spectrum highlighting the musical notes.
+    - Run the Python script to process and analyse the recorded audio.
+    - Observe the visualisations, including:
+        - Waveform of the melody in the time domain.
+        - Frequency spectrum (FFT) showing the dominant frequencies.
+        - Spectrogram showing frequency variation over time.
+        - Chromatic spectrum highlighting the musical notes.
 
 6. **Review the Results:**
 
-   - Evaluate the graphical outputs for insights into the melody's characteristics.
-   - Optionally, modify the Arduino code to change the melody and repeat the analysis.
+    - Evaluate the graphical outputs for insights into the melody's characteristics.
+    - Optionally, modify the Arduino code to change the melody and repeat the analysis.
