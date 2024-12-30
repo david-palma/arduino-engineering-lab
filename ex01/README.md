@@ -2,11 +2,21 @@
 
 This exercise is the same as the previous one with the only difference that a led connected to pin 13 is used instead of using the built-in led.
 
-## Schematic
+## Schematic Description
 
-<p align="center">
-    <img src="./ex01_schem.png" height="503px" alt="Schematic"></img>
-</p>
+### Components and Connections
+
+| **Component** | **Pin/Connection** | **Arduino Pin** | **Description**                                                                 |
+|---------------|--------------------|-----------------|---------------------------------------------------------------------------------|
+| **LED**       | Anode              | 13              | Turns ON and OFF as programmed in the code to create a blinking effect.         |
+|               | Cathode            | GND (via Resistor) | Connects to ground through a 220Ω resistor to ensure safe current flow.         |
+
+### Schematic Description Table
+
+| **Connection**          | **Pin**      | **Purpose**                                                                                   |
+|--------------------------|--------------|---------------------------------------------------------------------------------------------|
+| LED to Arduino           | 13           | Controls the ON/OFF state of the LED based on the programme logic.                           |
+| LED to Ground (via Resistor) | GND          | Ensures safe operation of the LED by limiting current with a resistor.                       |
 
 ## Code
 
@@ -30,3 +40,22 @@ void loop()
     delay(1000);                 // wait for a second
 }
 ```
+
+## Exercise Steps
+
+1. **Connect the External LED**:
+   - Connect the anode of an LED to digital pin 13 on the Arduino.
+   - Use appropriate resistors (e.g., 220Ω) in series with the LED to limit current.
+   - Connect the cathode of the LED to the GND rail.
+
+2. **Upload the Arduino Code**:
+   - Copy the provided code for blinking the LED.
+   - Open the Arduino IDE, paste the code, and upload it to the Arduino.
+
+3. **Observe LED Behaviour**:
+   - The external LED connected to pin 13 will turn ON for one second and OFF for one second in a continuous loop.
+   - Modify the `delay()` values in the code if you wish to change the blinking speed.
+
+4. **Experiment and Modify**:
+   - Try connecting the LED to a different pin and update the `led_pin` value in the code accordingly.
+   - Experiment with different delay durations to observe variations in blinking speed.

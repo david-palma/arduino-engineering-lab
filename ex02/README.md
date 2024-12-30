@@ -2,11 +2,21 @@
 
 This exercise makes use of array to turn ON and OFF multiple LEDs in sequence.
 
-## Schematic
+## Schematic Description
 
-<p align="center">
-    <img src="./ex02_schem.png" height="600px" alt="Schematic"></img>
-</p>
+### Components and Connections
+
+| **Component** | **Pin/Connection**   | **Arduino Pin** | **Description**                                                                               |
+|---------------|----------------------|-----------------|-------------------------------------------------------------------------------------------|
+| **LEDs (5x)** | Anode                | 9, 10, 11, 12, 13 | Indicates sequence by turning ON and OFF in an order defined by the programme logic.       |
+|               | Cathode              | GND (via Resistor) | Connects to ground through a 220Ω resistor to limit current.                               |
+
+### Schematic Description Table
+
+| **Connection**          | **Pin**      | **Purpose**                                                                                   |
+|--------------------------|--------------|---------------------------------------------------------------------------------------------|
+| LEDs to Arduino          | 9, 10, 11, 12, 13 | Controls the ON/OFF state of LEDs in a sequence as programmed in the code.                   |
+| LEDs to Ground (via Resistors) | GND          | Ensures safe operation of LEDs by limiting current with resistors.                           |
 
 ## Code
 
@@ -49,3 +59,21 @@ void loop()
     }
 }
 ```
+
+## Exercise Steps
+
+1. **Connect the LEDs**:
+   - Connect five LEDs to digital pins 9, 10, 11, 12, and 13 on the Arduino.
+   - Use appropriate resistors (e.g., 220Ω) in series with the LEDs to limit current.
+   - Connect the cathode of each LED to the GND rail.
+
+2. **Upload the Arduino Code**:
+   - Copy the provided code for sequential LED blinking.
+   - Open the Arduino IDE, paste the code, and upload it to the Arduino.
+
+3. **Observe LED Behaviour**:
+   - LEDs will turn ON and OFF in sequence from first to last and then from last to first.
+   - Adjust the `between_HL` constant in the code if needed to modify the delay between LED toggling.
+
+4. **Experiment and Modify**:
+   - Experiment with adding more LEDs or changing the sequence logic in the code.
